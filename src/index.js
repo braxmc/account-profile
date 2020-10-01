@@ -4,12 +4,14 @@ import './index.css';
 import App from './App';
 import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter } from 'react-router-dom';
-
+import AccountProvider from './providers/AccountProvider';
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <AccountProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AccountProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
